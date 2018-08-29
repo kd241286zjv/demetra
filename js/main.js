@@ -17,6 +17,7 @@ $(document).ready(function(){
   });
   var partnersSwiper = new Swiper('.partners-swiper-container', {
     slidesPerView: 5,
+    spaceBetween: 30,
     navigation: {
       nextEl: '.partners-swiper-container .swiper-button-next',
       prevEl: '.partners-swiper-container .swiper-button-prev',

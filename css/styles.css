@@ -589,7 +589,7 @@ h2{
 .productImage{
   width: 40%;
   padding: 0 60px;
-  max-height:200px;
+  max-height:300px;
 }
 .productImage img{
   width: 100%;
@@ -601,4 +601,56 @@ h2{
 }
 .productInfo{
   width: 30%;
+}
+.productList ul li span{
+  color:#61a564;
+}
+.productInfo{
+  font-size: 18px;
+}
+
+/********wholesale********/
+.wholesaleSection{
+  padding: 90px 0;
+}
+h2 span{
+  color:#61a564;
+}
+.wholesaleWrapper{
+  background: rgb(214,233,234); /* Old browsers */
+  background: -moz-linear-gradient(left, rgba(214,233,234,1) 0%, rgba(232,240,235,1) 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(left, rgba(214,233,234,1) 0%,rgba(232,240,235,1) 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to right, rgba(214,233,234,1) 0%,rgba(232,240,235,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d6e9ea', endColorstr='#e8f0eb',GradientType=1 ); /* IE6-9 */
+  border-radius: 15px;
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  justify-content: flex-start;
+  -ms-align-items: center;
+  align-items: center;
+  padding: 40px;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  min-height:270px;
+}
+.wholesaleWrapper svg{
+  height: 30px;
+  width: auto;
+  fill:#61a564;
+  margin-bottom: 15px;
+}
+h4{
+  color:#61a564;
+  font-family: 'regular';
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+.wholesaleWrapper p{
+  font-size: 18px;
+  text-align: center;
+}
+.wholesaleWrapper p span{
+  color:#61a564;
 }

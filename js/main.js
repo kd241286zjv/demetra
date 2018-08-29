@@ -11,15 +11,15 @@ $(document).ready(function(){
   var catalogSwiper = new Swiper('.catalog-swiper-container', {
     slidesPerView: 1,
     navigation: {
-      nextEl: '.swiper-button-next',
-      prevEl: '.swiper-button-prev',
+      nextEl: '.catalog-swiper-container .swiper-button-next',
+      prevEl: '.catalog-swiper-container .swiper-button-prev',
     },
   });
   var partnersSwiper = new Swiper('.partners-swiper-container', {
     slidesPerView: 5,
     navigation: {
-      nextEl: '.swiper-button-next',
-      prevEl: '.swiper-button-prev',
+      nextEl: '.partners-swiper-container .swiper-button-next',
+      prevEl: '.partners-swiper-container .swiper-button-prev',
     },
   });
 

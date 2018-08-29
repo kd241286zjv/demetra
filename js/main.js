@@ -29,6 +29,15 @@ $(document).ready(function(){
     $(this).parent().siblings().find('a').removeClass('activeCatalog');
     catalogSwiper.slideTo(slideNumber);
   });
+  $('.bottomHeader nav ul li a').click(function(){
+    $('html,body').stop().animate({ scrollTop: $('.catalogSection').offset().top }, 1000);
+    var slideNumber = $(this).attr('data-slide');
+    catalogSwiper.slideTo(slideNumber);
+    if(screen.width < 768){
+      $('.bottomHeader').slideUp('');
+      $('.hamburger').removeClass('is-active');
+    }
+  });
 
   var partnersSwiper = new Swiper('.partners-swiper-container', {
     slidesPerView: 5,
@@ -41,6 +50,13 @@ $(document).ready(function(){
     breakpoints:{
       992:{
         spaceBetween:15,
+      },
+      768:{
+        slidesPerView: 3,
+        spaceBetween:10,
+      },
+      576:{
+        slidesPerView: 1,
       }
     }
   });
@@ -71,5 +87,10 @@ $(document).ready(function(){
       $(this).toggleClass('activeTab');
       $('span[data-attr="' + foodAttr + '"]').remove();
     }
+  });
+
+  $('.hamburger').click(function(){
+    $(this).toggleClass('is-active');
+    $('.bottomHeader').slideToggle('');
   });
 });

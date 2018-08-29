@@ -44,7 +44,7 @@ ul{
   padding: 0;
   margin: 0;
 }
-a:focus, input:focus{
+a:focus, input:focus, button:focus{
   outline:none;
 }
 a{
@@ -1169,6 +1169,10 @@ footer{
   margin: 0;
 }
 
+.sandwich{
+  display: none;
+}
+
 /********adaptive********/
 @media(max-width:1199px){
   .bottomHeader nav ul li a svg{
@@ -1266,5 +1270,201 @@ footer{
   }
   .sectionForm input{
     width: 40%;
+  }
+}
+@media(max-width:767px){
+  .logoHeader{
+    width: 120px;
+  }
+  .socialIcon{
+    width: 30px;
+    height: 30px;
+  }
+  .headerPhone{
+    font-size: 16px;
+  }
+  .bottomHeader{
+    display: none;
+  }
+  .sandwich{
+    display: block;
+  }
+  .hamburger{
+    padding: 0;
+    margin: 0 auto;
+    display: block;
+  }
+  .mainSlider__subheader{
+    font-size: 22px;
+  }
+  .mainSlider__header{
+    font-size: 25px;
+  }
+  .mainSlider__icon div{
+    width: 40px;
+    height: 40px;
+  }
+  .mainSlider__icon svg{
+    height: 20px;
+  }
+  .selectSection::before{
+    height: 50px;
+  }
+  .selectSection h3{
+    margin-bottom: 40px;
+  }
+  .selectForm:before, .selectForm:after{
+    display: none;
+  }
+  .catalogSection::before{
+    height: 50px;
+  }
+  .catalogSection nav ul li{
+    width: 20%;
+  }
+  .catalogSection nav ul{
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+  }
+  .wholesaleSection{
+    padding: 20px 0;
+  }
+  .partnersSection::before{
+    height: 50px;
+  }
+  .partners-swiper-container{
+    width: 80%;
+  }
+  .advSection::before{
+    height: 50px;
+  }
+  .sectionForm input[type="submit"], .sectionForm input[type="tel"]{
+    font-size: 16px;
+  }
+  .bottomHeader nav ul{
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+  }
+  .bottomHeader nav ul li{
+    width: 20%;
+  }
+  .catalogSlider{
+    margin-top: 30px;
+  }
+  .modal-content{
+    padding: 15px;
+  }
+}
+@media(max-width:575px){
+  .headerContacts{
+    order:3;
+  }
+  .headerContacts{
+    width: 100%;
+    margin-top: 20px;
+    justify-content: space-around;
+  }
+  .headerSocials{
+    margin: 0;
+  }
+  .topHeader{
+    justify-content: space-around;
+  }
+  .bottomHeader nav{
+    border-radius: 15px;
+  }
+  .bottomHeader nav ul li{
+    width: 40%;
+  }
+  .bottomHeader nav ul{
+    justify-content: space-around;
+  }
+  .mainSlider-swiper-container .swiper-slide{
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+  .mainSlider__text{
+    order:2;
+  }
+  .mainSlider__subheader, .mainSlider__header{
+    text-align: center;
+  }
+  .mainSlider__icons{
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    width: 100%;
+  }
+  .mainSlider__icon{
+    margin-bottom: 10px;
+  }
+  .catalogSection nav{
+    border-radius: 15px;
+  }
+  .catalogSlider .swiper-slide{
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+  }
+  .productImage{
+    width: auto;
+    padding: 0;
+    height: 100px;
+    margin: 10px auto;
+    width:100%;
+  }
+  .productList, .productInfo{
+    padding: 0 10%;
+    width: 100%;
+  }
+  .swiper-button-next, .swiper-button-prev{
+    width: 30px;
+    height: 30px;
+  }
+  .catalogSection::after{
+    height: 75px;
+  }
+  h2{
+    font-size: 30px;
+  }
+  .wholesaleWrapper{
+    min-height: 230px;
+  }
+  .partnersQuote{
+    padding: 40px 20px;
+  }
+  .partnerQuote{
+    font-size: 16px;
+  }
+  .advSection h2{
+    margin-top: 10px;
+    margin-bottom: 80px;
+  }
+  .advFood{
+    margin-bottom: 75px;
+  }
+  .sectionForm{
+    padding: 30px 0;
+  }
+  .formGroup{
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+  .sectionForm input[type="submit"], .sectionForm input[type="tel"]{
+    width: 90%;
+    margin-bottom: 15px;
+  }
+  .agreement{
+    font-size: 13px;
+  }
+  .sectionForm{
+    margin-bottom: 0;
+  }
+  .sectionForm:before, .sectionForm:after{
+    display: none;
   }
 }

@@ -506,6 +506,7 @@ header{
   -webkit-background-size: 100% auto;
   background-size: 100% auto;
   background-repeat: no-repeat;
+  background-color: #fff;
 }
 .catalogSection{
   background: rgb(214,233,234); /* Old browsers */
@@ -575,6 +576,7 @@ h2{
 }
 .catalogSlider{
   width: 100%;
+  margin-top: 80px;
 }
 .catalogSlider .swiper-slide{
   padding:0 10%;
@@ -584,8 +586,15 @@ h2{
   -ms-align-items: flex-start;
   align-items: flex-start;
 }
-.catalogSlider img{
+.productImage{
   width: 40%;
+  padding: 0 60px;
+  max-height:200px;
+}
+.productImage img{
+  width: 100%;
+  height: 100%;
+  object-fit:contain;
 }
 .productList{
   width: 30%;

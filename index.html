@@ -70,7 +70,7 @@
             </div>
             <a href="tel: 89119522242" class="headerPhone">+7 (911) 952-22-42</a>
           </div>
-          <a href="javascript: void(0)" class="headerOrder">Заказ продуктов оптом</a>
+          <a href="javascript: void(0)" data-target="#modal" data-toggle="modal" class="headerOrder">Заказ продуктов оптом</a>
         </div>
         <div class="row bottomHeader">
           <nav>
@@ -2086,7 +2086,7 @@
             </div>
             <a href="tel: 89119522242" class="headerPhone">+7 (911) 952-22-42</a>
           </div>
-          <a href="javascript: void(0)" class="headerOrder">Заказ продуктов оптом</a>
+          <a href="javascript: void(0)" data-target="#modalSuccess" data-toggle="modal" class="headerOrder">Заказ продуктов оптом</a>
         </div>
       </div>
     </footer>
@@ -2114,10 +2114,10 @@
         </div>
         <div class="modal-body">
           <form action="" class="modalForm">
-            <div class="formInput"><input type="text" required></div>
-            <div class="formInput"><input type="tel" required></div>
+            <input type="text" placeholder="Ваше имя ..." required>
+            <input type="tel" placeholder="Ваш телефон ..." required>
             <input type="submit" value="Отправить">
-            <p class="modalPolicy">Отправляя заявку, вы даете согласие<br>на <a href="javascript: void(0)">обработку персональных данных</a></p>
+            <p class="agreement">Отправляя заявку вы даете согласие на <a href="javascript: void(0)">обработку личных данных</a></p>
           </form>
         </div>
       </div>
@@ -2146,7 +2146,7 @@
         </div>
         <div class="modal-body">
           <form action="" class="modalForm">
-            <input type="submit" data-dismiss="modal" value="Отправить">
+            <input type="submit" data-dismiss="modal" value="Закрыть" data-dismiss="modal" aria-label="Close">
           </form>
         </div>
       </div>

@@ -39,7 +39,13 @@ $(document).ready(function(){
   }
 
   $('.selectSection ul li a').click(function(){
-    console.log('here');
-    $(this).toggleClass('activeTab');
+    var foodAttr = $(this).attr('data-food');
+    if(!$(this).is('.activeTab')){
+      $(this).toggleClass('activeTab');
+      $('.selectForm__header').append('<span data-attr="' + foodAttr + '">' + foodAttr + '</span> ');
+    }else{
+      $(this).toggleClass('activeTab');
+      $('span[data-attr="' + foodAttr + '"]').remove();
+    }
   })
 });

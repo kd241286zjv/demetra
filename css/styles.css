@@ -395,6 +395,22 @@ header{
   color: #fff;
   font-family: 'bold';
   margin-bottom: 35px;
+  min-height:24px;
+}
+.selectForm__header span{
+  position: relative;
+}
+.selectForm__header span:after{
+  position: relative;
+  content:',';
+  font-family: 'bold';
+  color: #fff;
+}
+.selectForm__header span:last-child:after{
+  position: relative;
+  content:'';
+  font-family: 'bold';
+  color: #fff;
 }
 .selectForm input{
   width: 100%;

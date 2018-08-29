@@ -14,7 +14,47 @@ $(document).ready(function(){
       nextEl: '.catalog-swiper-container .swiper-button-next',
       prevEl: '.catalog-swiper-container .swiper-button-prev',
     },
+    on:{
+      slideChange: function(){
+        var menuID = catalogSwiper.activeIndex;
+        console.log(menuID);
+        $('.catalogSection nav ul li a[data-slide="' + menuID + '"]').addClass('activeCatalog');
+        $('.catalogSection nav ul li a[data-slide="' + menuID + '"]').parent().siblings().find('a').removeClass('activeCatalog');
+      }
+    },
   });
+  $('.catalogSection nav ul li a').click(function(){
+    var slideNumber = $(this).attr('data-slide');
+    $(this).addClass('activeCatalog');
+    $(this).parent().siblings().find('a').removeClass('activeCatalog');
+    catalogSwiper.slideTo(slideNumber);
+  });
+
+
+  var menuSwiper = new Swiper('.menu-swiper', {
+  nextButton: '.swiper-button-next',
+  prevButton: '.swiper-button-prev',
+  loop: true,
+  effect: 'fade',
+  fadeEffect: {
+    crossFade: true
+  },
+  onSlideChangeEnd: function(menuSwiper){
+    var cntList = $('.aboutBlock__menu ul li').length;
+    var menuID = menuSwiper.activeIndex%(cntList);
+    if (menuID == 0) menuID = cntList;
+    $('#menuID' + menuID).addClass('aboutBlock__menu-active');
+    $('#menuID' + menuID).siblings('li').removeClass('aboutBlock__menu-active');
+  }
+});
+$('.aboutBlock__menu ul li').click(function(){
+  var menuID = $(this).attr('data-menuID');
+  menuSwiper.slideTo(menuID);
+});
+
+
+
+
   var partnersSwiper = new Swiper('.partners-swiper-container', {
     slidesPerView: 5,
     spaceBetween: 30,
@@ -47,5 +87,5 @@ $(document).ready(function(){
       $(this).toggleClass('activeTab');
       $('span[data-attr="' + foodAttr + '"]').remove();
     }
-  })
+  });
 });

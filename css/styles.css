@@ -567,7 +567,7 @@ h2{
   -o-transition: .3s all ease;
   transition: .3s all ease;
 }
-.catalogSection nav ul li a:hover{
+.catalogSection nav ul li a:hover, .catalogSection nav ul li a.activeCatalog{
   color: #fff;
   background-color: #61a564;
   -webkit-transition: .3s all ease;
@@ -584,7 +584,7 @@ h2{
   -o-transition: .3s all ease;
   transition: .3s all ease;
 }
-.catalogSection nav ul li a:hover svg{
+.catalogSection nav ul li a:hover svg, .catalogSection nav ul li a.activeCatalog svg{
   fill:#fff;
   -webkit-transition: .3s all ease;
   -o-transition: .3s all ease;
@@ -605,12 +605,12 @@ h2{
 .productImage{
   width: 40%;
   padding: 0 60px;
-  max-height:300px;
 }
 .productImage img{
   width: 100%;
   height: 100%;
   object-fit:contain;
+  max-height:300px;
 }
 .productList{
   width: 30%;
@@ -623,6 +623,13 @@ h2{
 }
 .productInfo{
   font-size: 18px;
+}
+.swiper-pagination{
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  width: 100%;
+  position: relative;
 }
 
 /********wholesale********/

@@ -30,31 +30,6 @@ $(document).ready(function(){
     catalogSwiper.slideTo(slideNumber);
   });
 
-
-  var menuSwiper = new Swiper('.menu-swiper', {
-  nextButton: '.swiper-button-next',
-  prevButton: '.swiper-button-prev',
-  loop: true,
-  effect: 'fade',
-  fadeEffect: {
-    crossFade: true
-  },
-  onSlideChangeEnd: function(menuSwiper){
-    var cntList = $('.aboutBlock__menu ul li').length;
-    var menuID = menuSwiper.activeIndex%(cntList);
-    if (menuID == 0) menuID = cntList;
-    $('#menuID' + menuID).addClass('aboutBlock__menu-active');
-    $('#menuID' + menuID).siblings('li').removeClass('aboutBlock__menu-active');
-  }
-});
-$('.aboutBlock__menu ul li').click(function(){
-  var menuID = $(this).attr('data-menuID');
-  menuSwiper.slideTo(menuID);
-});
-
-
-
-
   var partnersSwiper = new Swiper('.partners-swiper-container', {
     slidesPerView: 5,
     spaceBetween: 30,
@@ -63,6 +38,11 @@ $('.aboutBlock__menu ul li').click(function(){
       nextEl: '.partnersColumn .swiper-button-next',
       prevEl: '.partnersColumn .swiper-button-prev',
     },
+    breakpoints:{
+      992:{
+        spaceBetween:15,
+      }
+    }
   });
 
   ymaps.ready(init);
@@ -76,6 +56,10 @@ $('.aboutBlock__menu ul li').click(function(){
       balloonContent: 'Содержимое балуна'
     });
     myMap.geoObjects.add(myPlacemark);
+    myMap.behaviors.disable('scrollZoom');
+    if(screen.width < 1200){
+      myMap.behaviors.disable('drag');
+    }
   }
 
   $('.selectSection ul li a').click(function(){
